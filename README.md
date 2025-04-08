@@ -18,6 +18,10 @@ store the metadata in a MySQL database, and visualize video analytics in an eleg
 
 ## 📸 UI Preview
 <img width="960" alt="image" src="https://github.com/user-attachments/assets/47898953-bbdd-4713-9752-6a060583350b" />
+<img width="947" alt="image" src="https://github.com/user-attachments/assets/5ca1d17e-203f-45d2-a329-9caa20ae5521" />
+<img width="731" alt="image" src="https://github.com/user-attachments/assets/c7031679-329a-440d-b7c9-cc47c8c98a47" />
+
+
 
 
 
