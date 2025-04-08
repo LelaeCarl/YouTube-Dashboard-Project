@@ -1,0 +1,38 @@
+{# templates/analytics.html #}
+{% extends 'base.html' %}
+{% block content %}
+<h2 class="mb-4">Video Analytics</h2>
+
+{% if videos %}
+<div class="row">
+    <div class="col-md-6">
+        <canvas id="viewsChart"></canvas>
+    </div>
+    <div class="col-md-6">
+        <canvas id="tagsChart"></canvas>
+    </div>
+</div>
+<script>
+    const viewsData = {
+        labels: [{% for v in videos %}'{{ v.title[:10]|escape }}',{% endfor %}],
+        datasets: [{
+            label: 'Views',
+            data: [{% for v in videos %}{{ v.views }},{% endfor %}],
+            backgroundColor: 'rgba(75, 123, 236, 0.6)'
+        }]
+    };
+    const tagsData = {
+        labels: [{% for tag, count in tags.items() %}'{{ tag }}',{% endfor %}],
+        datasets: [{
+            label: 'Top Tags',
+            data: [{% for tag, count in tags.items() %}{{ count }},{% endfor %}],
+            backgroundColor: 'rgba(32, 191, 107, 0.6)'
+        }]
+    };
+    createChart('viewsChart', 'bar', viewsData);
+    createChart('tagsChart', 'pie', tagsData);
+</script>
+{% else %}
+<div class="alert alert-warning">No data available yet. Please search for some videos first.</div>
+{% endif %}
+{% endblock %}

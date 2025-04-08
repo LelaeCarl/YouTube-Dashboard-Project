@@ -1,0 +1,146 @@
+/* static/css/style.css */
+:root {
+    --primary: #C94B4B;
+    --accent: #9BB6A1;
+    --muted: #EAE3C3;
+    --blueish: #3B7B7A;
+    --dark: #414643;
+}
+
+body {
+    font-family: 'Inter', 'Roboto', sans-serif;
+    background-color: var(--muted);
+    color: var(--dark);
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    background-color: var(--muted) !important;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.navbar .navbar-brand {
+    color: var(--primary);
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.navbar .nav-link {
+    color: var(--dark);
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: var(--blueish);
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #a83838;
+}
+
+.card {
+    background-color: white;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+    border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    border: 1px solid #e4e4e4;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+}
+
+.card-title {
+    color: var(--blueish);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #5e6366;
+}
+
+h2 {
+    color: var(--dark);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.alert-warning {
+    font-weight: 500;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+    color: #856404;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+canvas {
+    background: white;
+    padding: 1rem;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    margin-top: 20px;
+}
+
+iframe {
+    border-radius: 16px;
+    border: 1px solid #dee2e6;
+    transition: transform 0.3s ease;
+}
+
+iframe:hover {
+    transform: scale(1.02);
+}
+
+.input-group input {
+    border-radius: 30px 0 0 30px;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+}
+
+.input-group .btn {
+    border-radius: 0 30px 30px 0;
+    padding: 10px 24px;
+}
+
+/* Sidebar-inspired left nav for future expansion */
+.sidebar {
+    background-color: var(--dark);
+    color: white;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-weight: 500;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+    transition: all 0.3s ease;
+}
+
+.sidebar a:hover {
+    color: var(--accent);
+    padding-left: 8px;
+}
